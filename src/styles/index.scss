@@ -1,3 +1,37 @@
-body {
+@use '..//utils/variables' as *;
+@use '../utils/mixins' as *;
+@use '../components/header';
+@use '../components/stars';
+@use '../components/card';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap';
+
+*,
+*::after {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.main {
+  padding: 50px 40px;
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  gap: 46px 48px;
+  grid-template-columns: 1fr;
+
+  @include respond-up(488px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-up(768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond-up(1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
