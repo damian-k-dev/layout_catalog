@@ -25,7 +25,7 @@
     margin: 40px 16px 0;
   }
 
-  &__description {
+  &__title {
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
@@ -33,8 +33,8 @@
     margin: 0;
   }
 
-  &:hover &__description {
-    color: #34568b;
+  &:hover &__title {
+    color: $color-card-title-hover;
   }
 
   &__product-code {
@@ -91,6 +91,10 @@
     background-color: $blue-accent;
     color: $white;
     margin-top: 16px;
+    transition:
+      background-color 0.3s,
+      color 0.3s,
+      border 0.3s;
 
     &:hover {
       background-color: $white;
