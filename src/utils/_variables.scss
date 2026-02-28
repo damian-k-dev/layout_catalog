@@ -15,3 +15,8 @@ $catalog-row-gap: 46px;
 $catalog-column-gap: 48px;
 $catalog-padding-vertical: 50px;
 $catalog-padding-horizontal: 40px;
+$catalog-breakpoints: (
+  2: 488px,
+  3: 768px,
+  4: 1024px,
+);

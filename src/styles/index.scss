@@ -23,15 +23,9 @@ body {
   gap: $catalog-row-gap $catalog-column-gap;
   grid-template-columns: 1fr;
 
-  @include respond-up(488px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include respond-up(768px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @include respond-up(1024px) {
-    grid-template-columns: repeat(4, 1fr);
+  @each $cols, $breakpoints in $catalog-breakpoints {
+    @include respond-up($breakpoints) {
+      grid-template-columns: repeat($cols, 1fr);
+    }
   }
 }
