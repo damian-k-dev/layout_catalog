@@ -21,11 +21,11 @@ body {
   place-items: center;
   justify-content: center;
   gap: $catalog-row-gap $catalog-column-gap;
-  grid-template-columns: 1fr;
+  grid-template-columns: 200px;
 
   @each $cols, $breakpoints in $catalog-breakpoints {
     @include respond-up($breakpoints) {
-      grid-template-columns: repeat($cols, 1fr);
+      grid-template-columns: repeat($cols, 200px);
     }
   }
 }
